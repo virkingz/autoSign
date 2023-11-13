@@ -19,7 +19,7 @@ def qiandao(token):
     print(data);
 
 if __name__ == "__main__":
-    if token == "":
+    if g_token == "":
         exit(0)
     tokens = g_token.split("&")
     for s in tokens:
