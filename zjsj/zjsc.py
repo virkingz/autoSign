@@ -17,7 +17,7 @@ def qiandao(token):
     }
     headers['Authorization']=token
     data = get(url, headers=headers)
-    print(data.content.encode("utf-8").decode("utf-8"));
+    print(data.text());
 
 if __name__ == "__main__":
     if g_token == "":
