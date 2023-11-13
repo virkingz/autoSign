@@ -5,7 +5,7 @@ from datetime import date
 from json import dumps
 from requests import get, post
 # -- 获取token --
-# -- crontab 5 0 * * * python3 zjsc.py--
+# -- crontab 5 0,23 * * * python3 zjsc.py--
 os.getenv('ZJSC_TOKEN')
 os.environ.get('ZJSC_TOKEN')
 g_token=os.environ['ZJSC_TOKEN']
