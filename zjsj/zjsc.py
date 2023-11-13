@@ -16,7 +16,7 @@ def qiandao(token):
 	'User-Agent':'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Mobile Safari/537.36'
     }
     headers['Authorization']=token
-    data = get(url, headers=headers).json()
+    data = get(url, headers=headers)
     print(data);
 
 if __name__ == "__main__":
