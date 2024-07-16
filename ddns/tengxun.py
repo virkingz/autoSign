@@ -18,7 +18,7 @@ class DnsPodAPI:
     def __init__(self, api_id, api_token, domain, value):
         self.api_id = api_id
         self.api_token = api_token
-        self.api_domin = "aliyun.virking.top"
+        self.api_domin = domain
         self.records_id = 0
         self.domin_id = 0
         self.domain = domain
