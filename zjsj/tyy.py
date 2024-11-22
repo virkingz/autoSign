@@ -146,6 +146,6 @@ if __name__ == "__main__":
         exit(0)
     tokens = g_token.split("&")
     for s in tokens:
-      user,password = input_str.split("@")
+      user,password = s.split("@")
       helper = CheckIn(user, password)
       helper.check_in()
