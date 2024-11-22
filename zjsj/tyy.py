@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+# -- coding: utf-8 --
 import argparse
 import base64
 import re
@@ -6,6 +8,7 @@ import time
 import requests
 import rsa
 import os
+# -- crontab 5 0,23 * * * python3 zjsc.py--
 os.getenv('TYY_TOKEN')
 os.environ.get('TYY_TOKEN')
 g_token=os.environ['TYY_TOKEN']
