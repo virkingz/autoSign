@@ -13,7 +13,7 @@ g_token=os.environ['ZJSC_TOKEN']
 def qiandao(token):
     url='https://pro.zjypwy.com/shop-api/zj-api-shop/p/score/updateUserScore'
     headers={
-	'User-Agent':'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Mobile Safari/537.36'
+	'User-Agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.54(0x1800362c) NetType/4G Language/zh_CN miniProgram/wx880c4e504e1164de'
     }
     headers['Authorization']=token
     data = get(url, headers=headers)
