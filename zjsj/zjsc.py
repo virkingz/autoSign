@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 # -- coding: utf-8 --
 import os
+import random
+import time
 from datetime import date
 from json import dumps
 from requests import get, post
@@ -22,6 +24,9 @@ def qiandao(token):
 if __name__ == "__main__":
     if g_token == "":
         exit(0)
+    delay = random.randint(1, 60)
+    print(f"将延迟 {delay} 秒...")
+    time.sleep(delay)
     tokens = g_token.split("&")
     for s in tokens:
         qiandao(s)
