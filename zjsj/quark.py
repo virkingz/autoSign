@@ -1,7 +1,7 @@
 from datetime import datetime
 from pprint import pprint
 from loguru import logger
-import httpx
+import requests
 import os
 
 # 夸克
@@ -22,7 +22,7 @@ def query_balance():
         "moduleCode": "1f3563d38896438db994f118d4ff53cb",
         "kps": kps,
     }
-    response = httpx.get(url=url, params=querystring)
+    response = requests.get(url=url, params=querystring)
     response.raise_for_status()
     pprint(response.json())
 
@@ -55,7 +55,7 @@ def user_info():
         "sign": sign,
         "vcode": vcode,
     }
-    response = httpx.get(url=url, params=querystring)
+    response = requests.get(url=url, params=querystring)
     response.raise_for_status()
     content = response.json()
     if content["code"] != 0:
@@ -91,7 +91,7 @@ def checkin():
         "sign": sign,
         "vcode": vcode,
     }
-    response = httpx.post(url=url, json={"sign_cyclic": True}, params=querystring)
+    response = requests.post(url=url, json={"sign_cyclic": True}, params=querystring)
     if response.status_code == 200:
         if response.json()["code"] != 0:
             logger.warning(response.json()["message"])
